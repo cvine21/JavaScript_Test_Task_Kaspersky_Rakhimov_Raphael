@@ -11,7 +11,7 @@ import "./App.css";
 
 function App() {
 	const [users, setUser] = useState([]);
-	// const [search, setSearch] = useState("");
+	const [term, setTerm] = useState("");
 
 	useEffect(() => {
 		async function fetchData() {
@@ -27,12 +27,31 @@ function App() {
 		fetchData();
 	}, []);
 
+	const searchEmp = (items, term) => {
+		if (!term.length) return items;
+		return items.filter((item) => item.fullname.indexOf(term) !== -1);
+	};
+
+	const onUpdateSearch = (term) => {
+		setTerm(term);
+	};
+
+	const visibleData = searchEmp(users, term);
+
 	return (
 		<div className="wrapper clear">
 			<Header />
 			<Routes>
 				{/* <Route path="/" element={<Home />} /> */}
-				<Route path="/" element={<Users users={users} />} />
+				<Route
+					path="/"
+					element={
+						<Users
+							users={visibleData}
+							onUpdateSearch={onUpdateSearch}
+						/>
+					}
+				/>
 			</Routes>
 		</div>
 	);

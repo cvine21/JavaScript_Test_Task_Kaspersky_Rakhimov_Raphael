@@ -4,9 +4,9 @@ function Home() {
 	return (
 		<div className="content">
 			<div className="d-flex align-center justify-between mb-40">
-				<h1>Пользователи</h1>
+				{/* <h1>Пользователи</h1> */}
 				<div className="search-block d-flex">
-					<img src="/img/search.svg" alt="Search" />
+					<img src="search.svg" alt="Search" />
 					<input placeholder="Поиск..." />
 				</div>
 			</div>
