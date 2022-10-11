@@ -1,11 +1,13 @@
 function UserRow({ user }) {
+	const { fullname, account, email, group, phone } = user;
+
 	return (
 		<tr>
-			<td>{user.fullname}</td>
-			<td>{user.account}</td>
-			<td>{user.email}</td>
-			<td>{user.group}</td>
-			<td>{user.phone}</td>
+			<td>{fullname}</td>
+			<td>{account}</td>
+			<td>{email}</td>
+			<td>{group}</td>
+			<td>{phone}</td>
 		</tr>
 	);
 }

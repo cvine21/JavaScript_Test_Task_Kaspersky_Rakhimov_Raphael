@@ -1,12 +1,15 @@
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+}
 * {
-	text-decoration: none;
 	color: black;
 }
 
 header {
-	display: flex;
+	@include flex-center;
+
 	justify-content: space-between;
-	align-items: center;
 	padding: 40px 60px;
 
 	ul {
@@ -16,14 +19,14 @@ header {
 				margin-right: 30px;
 			}
 			cursor: pointer;
-			list-style-type: none;
 		}
+		list-style-type: none;
 	}
 }
 
 .logo {
-	display: flex;
-	align-items: center;
+	@include flex-center;
+
 	p {
 		opacity: 0.5;
 	}
