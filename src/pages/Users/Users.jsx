@@ -17,9 +17,9 @@ function Users({ users, onUpdateSearch }) {
 	return (
 		<div>
 			<Navbar onUpdateSearch={onUpdateSearch} />
-			{/* <UserTable users={usersTable} /> */}
+			<UserTable users={usersTable} />
 			{/* <div className="cards">{userCards}</div> */}
-			<div className="groups">{groups}</div>
+			{/* <div className="groups">{groups}</div> */}
 		</div>
 	);
 }

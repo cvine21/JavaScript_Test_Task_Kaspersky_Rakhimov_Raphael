@@ -44,7 +44,7 @@ function App() {
 			<Routes>
 				{/* <Route path="/" element={<Home />} /> */}
 				<Route
-					path="/"
+					path="/users"
 					element={
 						<Users
 							users={visibleData}

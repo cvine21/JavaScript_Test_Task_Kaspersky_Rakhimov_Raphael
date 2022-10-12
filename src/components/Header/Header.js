@@ -4,21 +4,25 @@ import "./Header.scss";
 
 function Header(props) {
 	return (
-		<header>
+		<nav
+			className="navbar navbar-expand-lg bg-secondary fixed-top"
+			id="main-nav"
+		>
 			<Link to="/">
 				<div className="logo">
 					<img width={40} height={40} src="logo192.png" alt="logo" />
-					<div>
-						<h3>USERS</h3>
-						<p>Реакт приложение</p>
-					</div>
+					<h3>USERS APP</h3>
 				</div>
 			</Link>
 			<ul>
-				<li>Home</li>
-				<li>Users</li>
+				<Link to="/">
+					<li>HOME</li>
+				</Link>
+				<Link to="/users">
+					<li>USERS</li>
+				</Link>
 			</ul>
-		</header>
+		</nav>
 	);
 }
 
