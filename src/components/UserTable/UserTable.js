@@ -2,9 +2,8 @@ import "./UserTable.scss";
 
 function UserTable({ users }) {
 	return (
-		<div className="table-responsive border overflow">
+		<div className="table-responsive border table-wrapper show">
 			<table className="table table-striped table-hover">
-				<caption>Список пользователей</caption>
 				<thead className="table-secondary">
 					<tr>
 						<th scope="col">Полное имя</th>
@@ -16,6 +15,7 @@ function UserTable({ users }) {
 				</thead>
 				<tbody>{users}</tbody>
 			</table>
+			<caption>Список пользователей</caption>
 		</div>
 	);
 }

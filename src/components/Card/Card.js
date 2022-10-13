@@ -10,9 +10,7 @@ function Card({ user }) {
 			className="user-card text-center border"
 			style={{ width: "14rem" }}
 		>
-			<p>
-				<span>{fullname}</span>
-			</p>
+			<p className="bold">{fullname}</p>
 			<img width={140} src="photo.png" alt="photo" />
 			<div className="card-body">
 				<p className="card-text">{group}</p>

@@ -1,7 +1,8 @@
 import SearchField from "./SearchField";
-import Options from "./Options/Options";
+import SortOptions from "./SortOptions";
+import DisplayOptions from "./DisplayOptions";
 
-function ToolBar({ onUpdateSearch }) {
+function Navbar({ onUpdateSearch }) {
 	return (
 		<nav className="navbar navbar-expand-lg bg-light fixed">
 			<div className="container-fluid">
@@ -9,11 +10,14 @@ function ToolBar({ onUpdateSearch }) {
 					className="collapse navbar-collapse"
 					id="navbarSupportedContent"
 				>
-					<Options />
+					<ul className="navbar-nav me-auto mb-2 mb-lg-0 me-3">
+						<SortOptions />
+						<DisplayOptions />
+					</ul>
 					<SearchField onUpdateSearch={onUpdateSearch} />
 				</div>
 			</div>
 		</nav>
 	);
 }
-export default ToolBar;
+export default Navbar;
