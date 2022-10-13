@@ -1,5 +1,5 @@
 import SearchField from "./SearchField";
-import SortPanel from "./SortPanel/SortPanel";
+import Options from "./Options/Options";
 
 function ToolBar({ onUpdateSearch }) {
 	return (
@@ -9,7 +9,7 @@ function ToolBar({ onUpdateSearch }) {
 					className="collapse navbar-collapse"
 					id="navbarSupportedContent"
 				>
-					<SortPanel />
+					<Options />
 					<SearchField onUpdateSearch={onUpdateSearch} />
 				</div>
 			</div>

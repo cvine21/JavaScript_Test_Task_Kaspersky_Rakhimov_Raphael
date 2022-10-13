@@ -2,10 +2,10 @@ import "./UserTable.scss";
 
 function UserTable({ users }) {
 	return (
-		<div className="table-responsive">
+		<div className="table-responsive border tableFixHead">
 			<table className="table table-striped table-hover">
 				<caption>Список пользователей</caption>
-				<thead className="thead-dark">
+				<thead className="table-secondary">
 					<tr>
 						<th scope="col">Полное имя</th>
 						<th scope="col">Учетная запись</th>

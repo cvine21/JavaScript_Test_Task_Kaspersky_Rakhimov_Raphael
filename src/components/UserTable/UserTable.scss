@@ -1,1 +1,10 @@
-@import "../../index.scss";
+.tableFixHead {
+	overflow: auto;
+	height: 100vh;
+}
+
+th {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}

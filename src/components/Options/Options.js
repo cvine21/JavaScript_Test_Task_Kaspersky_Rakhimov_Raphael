@@ -1,16 +1,15 @@
-function SortPanel() {
+function Options() {
 	return (
-		<ul className="navbar-nav me-auto mb-2 mb-lg-0">
-			<li className="nav-item dropdown border rounded">
-				<a
-					className="nav-link dropdown-toggle"
-					href="#"
-					role="button"
+		<ul className="navbar-nav me-auto mb-2 mb-lg-0 me-3">
+			<div className="dropdown">
+				<button
+					className="btn btn-outline-dark dropdown-toggle border"
+					type="button"
 					data-bs-toggle="dropdown"
 					aria-expanded="false"
 				>
-					{"Cортировать по имени: "}
-				</a>
+					{"Сортировать по: "}
+				</button>
 				<ul className="dropdown-menu">
 					<li>
 						<a className="dropdown-item" href="#">
@@ -25,17 +24,16 @@ function SortPanel() {
 						</a>
 					</li>
 				</ul>
-			</li>
-			<li className="nav-item dropdown border rounded mx-5">
-				<a
-					className="nav-link dropdown-toggle"
-					href="#"
-					role="button"
+			</div>
+			<div className="dropdown ms-3">
+				<button
+					className="btn btn-outline-dark dropdown-toggle border"
+					type="button"
 					data-bs-toggle="dropdown"
 					aria-expanded="false"
 				>
-					{"Отображать в виде: "}
-				</a>
+					{"Отбразить в виде: "}
+				</button>
 				<ul className="dropdown-menu">
 					<li>
 						<a className="dropdown-item" href="#">
@@ -44,7 +42,7 @@ function SortPanel() {
 					</li>
 					<li>
 						<a className="dropdown-item" href="#">
-							списка
+							карточек
 						</a>
 					</li>
 					<li>
@@ -53,9 +51,9 @@ function SortPanel() {
 						</a>
 					</li>
 				</ul>
-			</li>
+			</div>
 		</ul>
 	);
 }
 
-export default SortPanel;
+export default Options;
