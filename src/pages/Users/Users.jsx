@@ -1,11 +1,12 @@
 import "./Users.scss";
 
 import UserTable from "../../components/UserTable/UserTable";
-import ToolBar from "../../components/Navbar";
+import Navbar from "../../components/Navbar";
 import Card from "../../components/Card/Card";
 import Group from "../../components/Group";
+import { useState } from "react";
 
-function Users({ users, onUpdateSearch }) {
+function Users({ users, onUpdateSearch, onSort }) {
 	const groupNames = ["Intern", "Junior", "Middle", "Senior"];
 	const groups = groupNames.map((item) => (
 		<Group name={item} users={users} />
@@ -14,7 +15,11 @@ function Users({ users, onUpdateSearch }) {
 
 	return (
 		<div className="users-wrapper">
-			<ToolBar onUpdateSearch={onUpdateSearch} />
+			<Navbar
+				onUpdateSearch={onUpdateSearch}
+				onSort={onSort}
+				users={users}
+			/>
 			<div>
 				<UserTable users={users} />
 				<div className="cards users-data hide">{userCards}</div>

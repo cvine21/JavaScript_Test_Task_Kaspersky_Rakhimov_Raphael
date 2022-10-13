@@ -8,7 +8,7 @@ function UserTable({ users }) {
 	));
 
 	return (
-		<div className="table-responsive border table-wrapper users-data hide">
+		<div className="table-responsive border table-wrapper users-data show">
 			<table className="table table-striped table-hover">
 				<thead className="table-secondary">
 					<tr>

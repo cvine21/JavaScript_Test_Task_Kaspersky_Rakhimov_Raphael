@@ -2,7 +2,7 @@ import SearchField from "./SearchField";
 import SortOptions from "./SortOptions";
 import DisplayOptions from "./DisplayOptions";
 
-function Navbar({ onUpdateSearch }) {
+function Navbar({ onUpdateSearch, onSort, users }) {
 	return (
 		<nav className="navbar navbar-expand-lg bg-light fixed">
 			<div className="container-fluid">
@@ -11,7 +11,7 @@ function Navbar({ onUpdateSearch }) {
 					id="navbarSupportedContent"
 				>
 					<ul className="navbar-nav me-auto mb-2 mb-lg-0 me-3">
-						<SortOptions />
+						<SortOptions onSort={onSort} users={users} />
 						<DisplayOptions />
 					</ul>
 					<SearchField onUpdateSearch={onUpdateSearch} />

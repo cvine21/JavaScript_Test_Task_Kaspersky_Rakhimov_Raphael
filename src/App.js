@@ -27,6 +27,10 @@ function App() {
 		fetchData();
 	}, []);
 
+	const onSort = (sorted) => {
+		setUser(sorted);
+	};
+
 	const searchEmp = (items, term) => {
 		if (!term.length) return items;
 		return items.filter((item) => item.fullname.indexOf(term) !== -1);
@@ -49,6 +53,7 @@ function App() {
 						<Users
 							users={visibleData}
 							onUpdateSearch={onUpdateSearch}
+							onSort={onSort}
 						/>
 					}
 				/>
