@@ -1,3 +1,5 @@
+import "./Options.scss";
+
 function Options() {
 	return (
 		<ul className="navbar-nav me-auto mb-2 mb-lg-0 me-3">
@@ -25,28 +27,28 @@ function Options() {
 					</li>
 				</ul>
 			</div>
-			<div className="dropdown ms-3">
+			<div className="dropdown ms-3 ">
 				<button
-					className="btn btn-outline-dark dropdown-toggle border"
+					className="btn btn-outline-dark dropdown-toggle border "
 					type="button"
 					data-bs-toggle="dropdown"
 					aria-expanded="false"
 				>
 					{"Отбразить в виде: "}
 				</button>
-				<ul className="dropdown-menu">
+				<ul className="dropdown-menu ">
 					<li>
-						<a className="dropdown-item" href="#">
+						<a className="dropdown-item " href="#">
 							таблицы
 						</a>
 					</li>
 					<li>
-						<a className="dropdown-item" href="#">
+						<a className="dropdown-item " href="#">
 							карточек
 						</a>
 					</li>
 					<li>
-						<a className="dropdown-item" href="#">
+						<a className="dropdown-item " href="#">
 							групп
 						</a>
 					</li>

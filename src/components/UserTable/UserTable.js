@@ -2,7 +2,7 @@ import "./UserTable.scss";
 
 function UserTable({ users }) {
 	return (
-		<div className="table-responsive border tableFixHead">
+		<div className="table-responsive border overflow">
 			<table className="table table-striped table-hover">
 				<caption>Список пользователей</caption>
 				<thead className="table-secondary">
