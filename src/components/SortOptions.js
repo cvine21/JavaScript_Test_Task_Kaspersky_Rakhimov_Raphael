@@ -11,16 +11,16 @@ function SortOptions() {
 			</button>
 			<ul className="dropdown-menu">
 				<li>
-					<a className="dropdown-item" href="#">
+					<span className="dropdown-item">
 						<img src="sort-alpha-up.svg" alt="sort-up" /> по
 						возрастанию
-					</a>
+					</span>
 				</li>
 				<li>
-					<a className="dropdown-item" href="#">
+					<span className="dropdown-item">
 						<img src="sort-alpha-down.svg" alt="sort-down" /> по
 						убыванию
-					</a>
+					</span>
 				</li>
 			</ul>
 		</div>

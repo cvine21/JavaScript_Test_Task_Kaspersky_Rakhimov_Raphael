@@ -1,8 +1,14 @@
 import "./UserTable.scss";
 
+import UserRow from "../UserRow";
+
 function UserTable({ users }) {
+	const usersList = users.map((user) => (
+		<UserRow user={user} key={user.id} />
+	));
+
 	return (
-		<div className="table-responsive border table-wrapper show">
+		<div className="table-responsive border table-wrapper users-data hide">
 			<table className="table table-striped table-hover">
 				<thead className="table-secondary">
 					<tr>
@@ -13,9 +19,8 @@ function UserTable({ users }) {
 						<th scope="col">Номер телефона</th>
 					</tr>
 				</thead>
-				<tbody>{users}</tbody>
+				<tbody>{usersList}</tbody>
 			</table>
-			<caption>Список пользователей</caption>
 		</div>
 	);
 }

@@ -1,7 +1,7 @@
 function Group({ name, users }) {
 	const groupList = users.filter(({ group }) => group === name);
-	const groupListItems = groupList.map(({ fullname, group }) => (
-		<div className="group-item">
+	const groupListItems = groupList.map(({ fullname, group, id }) => (
+		<div className="group-item" key={id}>
 			<p>{fullname}</p>
 			<p>{group}</p>
 		</div>
