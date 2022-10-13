@@ -1,4 +1,15 @@
-@import "../../index.scss";
+.users-page {
+	margin-top: 72px;
+}
+
+.fixed {
+	position: fixed;
+	width: 100%;
+}
+
+.content {
+	padding-top: 56px;
+}
 
 .cards {
 	display: flex;

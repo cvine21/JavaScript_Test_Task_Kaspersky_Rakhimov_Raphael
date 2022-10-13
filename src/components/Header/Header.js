@@ -3,25 +3,45 @@ import { Link } from "react-router-dom";
 import "./Header.scss";
 
 function Header(props) {
+	const onChangeBg = (e) => {
+		const listItems = document.querySelectorAll("li");
+		listItems.forEach((item) => item.classList.remove("active"));
+		e.target.classList.add("active");
+	};
+
 	return (
-		<nav
-			className="navbar navbar-expand-lg bg-secondary fixed-top"
-			id="main-nav"
-		>
-			<Link to="/">
-				<div className="logo">
-					<img width={40} height={40} src="logo192.png" alt="logo" />
-					<h3>USERS APP</h3>
-				</div>
-			</Link>
-			<ul>
+		<nav className="navbar navbar-dark bg-dark fixed-top">
+			<div className="container">
 				<Link to="/">
-					<li>HOME</li>
+					<div className="logo">
+						<img
+							width={40}
+							height={40}
+							src="logo192.png"
+							alt="logo"
+						/>
+						<h3 className="navbar-brand">USERS APP</h3>
+					</div>
 				</Link>
-				<Link to="/users">
-					<li>USERS</li>
-				</Link>
-			</ul>
+				<ul className="navbar-list">
+					<Link to="/">
+						<li
+							onClick={onChangeBg}
+							className="nav-list-item rounded"
+						>
+							HOME
+						</li>
+					</Link>
+					<Link to="/users">
+						<li
+							onClick={onChangeBg}
+							className="nav-list-item rounded"
+						>
+							USERS
+						</li>
+					</Link>
+				</ul>
+			</div>
 		</nav>
 	);
 }

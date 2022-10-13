@@ -1,9 +1,9 @@
 import SearchField from "./SearchField";
 import SortPanel from "./SortPanel/SortPanel";
 
-function Navbar({ onUpdateSearch }) {
+function ToolBar({ onUpdateSearch }) {
 	return (
-		<nav className="navbar navbar-expand-lg bg-light">
+		<nav className="navbar navbar-expand-lg bg-light fixed">
 			<div className="container-fluid">
 				<div
 					className="collapse navbar-collapse"
@@ -16,4 +16,4 @@ function Navbar({ onUpdateSearch }) {
 		</nav>
 	);
 }
-export default Navbar;
+export default ToolBar;
