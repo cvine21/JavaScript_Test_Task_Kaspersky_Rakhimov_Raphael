@@ -1,4 +1,4 @@
-# Kaspersky test
+# JavaScript_Тестовое_Задание_Рахимов_Рафаэль
 A react application that displays a list of users
 
 ## Features
