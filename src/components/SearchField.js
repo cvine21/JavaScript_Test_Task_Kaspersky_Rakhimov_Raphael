@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import AppContext from "./context";
 
 function SearchField(props) {
 	const [term, setTerm] = useState("");
+	const { updateSearch } = useContext(AppContext);
 
 	const onUpdateSearch = (e) => {
 		const term = e.target.value;
 		setTerm(term);
-		props.onUpdateSearch(term);
+		updateSearch(term);
 	};
 
 	return (

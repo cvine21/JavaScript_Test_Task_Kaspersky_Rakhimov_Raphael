@@ -1,8 +1,12 @@
 import "./UserTable.scss";
 
 import UserRow from "../UserRow";
+import { useContext } from "react";
+import AppContext from "../context";
 
-function UserTable({ users }) {
+function UserTable() {
+	const { visibleData: users } = useContext(AppContext);
+
 	const usersList = users.map((user) => (
 		<UserRow user={user} key={user.id} />
 	));

@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import axios from "axios";
 
+import Home from "./pages/Home/Home";
+import Users from "./pages/Users/Users";
 import Header from "./components/Header/Header";
 
-// import Home from "./pages/Home/Home";
-import Users from "./pages/Users/Users";
-
 import "./App.css";
+import AppContext from "./components/context";
 
 function App() {
 	const [users, setUser] = useState([]);
@@ -36,29 +36,20 @@ function App() {
 		return items.filter((item) => item.fullname.indexOf(term) !== -1);
 	};
 
-	const onUpdateSearch = (term) => {
+	const updateSearch = (term) => {
 		setTerm(term);
 	};
 
 	const visibleData = searchEmp(users, term);
 
 	return (
-		<div className="wrapper clear">
+		<AppContext.Provider value={{ visibleData, updateSearch, onSort }}>
 			<Header />
 			<Routes>
-				{/* <Route path="/" element={<Home />} /> */}
-				<Route
-					path="/users"
-					element={
-						<Users
-							users={visibleData}
-							onUpdateSearch={onUpdateSearch}
-							onSort={onSort}
-						/>
-					}
-				/>
+				<Route path="/" element={<Home />} />
+				<Route path="/users" element={<Users />} />
 			</Routes>
-		</div>
+		</AppContext.Provider>
 	);
 }
 

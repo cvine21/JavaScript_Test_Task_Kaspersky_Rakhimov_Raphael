@@ -1,4 +1,9 @@
-function Group({ name, users }) {
+import { useContext } from "react";
+import AppContext from "./context";
+
+function Group({ name }) {
+	const { visibleData: users } = useContext(AppContext);
+
 	const groupList = users.filter(({ group }) => group === name);
 	const groupListItems = groupList.map(({ fullname, group, id }) => (
 		<div className="group-item" key={id}>

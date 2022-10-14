@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import AppContext from "./context";
 
-function SortOptions({ onSort, users }) {
+function SortOptions() {
 	const [direction, setDirection] = useState(0);
+	const { visibleData: users, onSort } = useContext(AppContext);
 
 	const sort = (order) => {
 		if (order === direction) return;
