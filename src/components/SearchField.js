@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import AppContext from "./context";
+import AppContext from "../context";
 
 function SearchField(props) {
 	const [term, setTerm] = useState("");

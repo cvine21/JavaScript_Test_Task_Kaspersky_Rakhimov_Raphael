@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import AppContext from "../../components/context";
+import AppContext from "../../context";
 
 import UserTable from "../../components/UserTable/UserTable";
 import Navbar from "../../components/Navbar/Navbar";

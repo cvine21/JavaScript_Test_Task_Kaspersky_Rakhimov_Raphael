@@ -6,7 +6,7 @@ import Home from "./pages/Home/Home";
 import Users from "./pages/Users/Users";
 import Header from "./components/Header/Header";
 
-import AppContext from "./components/context";
+import AppContext from "./context";
 
 function App() {
 	const [users, setUser] = useState([]);

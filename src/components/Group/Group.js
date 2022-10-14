@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import AppContext from "../context";
+import AppContext from "../../context";
 
 import "./Group.scss";
 

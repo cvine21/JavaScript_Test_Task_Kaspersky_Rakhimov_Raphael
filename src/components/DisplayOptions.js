@@ -33,19 +33,34 @@ function DisplayOptions() {
 					onClick={() => updateDisplayOption(0)}
 					className="dropdown-item"
 				>
-					таблицы
+					<button
+						className="dropdown-item"
+						aria-labelledby="dropdownMenu2"
+					>
+						таблицы
+					</button>
 				</li>
 				<li
 					onClick={() => updateDisplayOption(1)}
 					className="dropdown-item"
 				>
-					карточек
+					<button
+						className="dropdown-item"
+						aria-labelledby="dropdownMenu2"
+					>
+						карточек
+					</button>
 				</li>
 				<li
 					onClick={() => updateDisplayOption(2)}
 					className="dropdown-item"
 				>
-					групп
+					<button
+						className="dropdown-item"
+						aria-labelledby="dropdownMenu2"
+					>
+						групп
+					</button>
 				</li>
 			</ul>
 		</div>

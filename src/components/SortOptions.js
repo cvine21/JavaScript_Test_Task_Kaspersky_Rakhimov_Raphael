@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import AppContext from "./context";
+import AppContext from "../context";
 
 function SortOptions() {
 	const [direction, setDirection] = useState(0);
@@ -29,16 +29,22 @@ function SortOptions() {
 			</button>
 			<ul className="dropdown-menu">
 				<li onClick={() => sort(1)}>
-					<span className="dropdown-item">
+					<button
+						className="dropdown-item"
+						aria-labelledby="dropdownMenu2"
+					>
 						<img src="sort-alpha-up.svg" alt="sort-up" /> по
 						возрастанию
-					</span>
+					</button>
 				</li>
 				<li onClick={() => sort(-1)}>
-					<span className="dropdown-item">
+					<button
+						className="dropdown-item"
+						aria-labelledby="dropdownMenu2"
+					>
 						<img src="sort-alpha-down.svg" alt="sort-down" /> по
 						убыванию
-					</span>
+					</button>
 				</li>
 			</ul>
 		</div>
