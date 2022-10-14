@@ -1,6 +1,12 @@
-.fixed {
-	position: fixed;
-	width: 100%;
-	top: 72px;
-	z-index: 1;
+@import "../../index.scss";
+
+.navbar {
+	background-color: $base-color;
+
+	&.fixed {
+		position: fixed;
+		width: 100%;
+		top: 72px;
+		z-index: 1;
+	}
 }

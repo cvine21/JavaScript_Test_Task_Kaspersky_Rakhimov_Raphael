@@ -20,16 +20,5 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-
-	.group-item {
-		border: 0.5px solid grey;
-		border-radius: 5px;
-		width: 13rem;
-		height: 4rem;
-		margin: 2px auto;
-
-		p {
-			margin: auto;
-		}
-	}
+	flex-wrap: wrap;
 }

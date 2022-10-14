@@ -1,5 +1,7 @@
 import { useContext } from "react";
-import AppContext from "./context";
+import AppContext from "../context";
+
+import "./Group.scss";
 
 function Group({ name }) {
 	const { visibleData: users } = useContext(AppContext);
@@ -7,15 +9,15 @@ function Group({ name }) {
 	const groupList = users.filter(({ group }) => group === name);
 	const groupListItems = groupList.map(({ fullname, group, id }) => (
 		<div className="group-item" key={id}>
-			<p>{fullname}</p>
-			<p>{group}</p>
+			<p className="name">{fullname}</p>
+			<p className="group-name">{group}</p>
 		</div>
 	));
 
 	return (
-		<div className="card" style={{ width: "14rem" }}>
-			<div className="card-header">{name}</div>
-			<div className="list-group list-group-flush">{groupListItems}</div>
+		<div className="card bg-light group">
+			<div className="header">{name}</div>
+			<div className="users-list bg-light">{groupListItems}</div>
 		</div>
 	);
 }

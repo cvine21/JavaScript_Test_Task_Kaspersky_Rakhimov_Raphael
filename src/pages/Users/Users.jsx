@@ -4,7 +4,7 @@ import AppContext from "../../components/context";
 import UserTable from "../../components/UserTable/UserTable";
 import Navbar from "../../components/Navbar/Navbar";
 import Card from "../../components/Card/Card";
-import Group from "../../components/Group";
+import Group from "../../components/Group/Group";
 
 import "./Users.scss";
 
@@ -19,8 +19,8 @@ function Users() {
 		<div className="users-wrapper">
 			<Navbar />
 			<UserTable />
-			<div className="cards users-data hide">{userCards}</div>
-			<div className="groups users-data hide">{groups}</div>
+			<div className="cards users-data bg-dark hide">{userCards}</div>
+			<div className="groups users-data bg-dark hide">{groups}</div>
 		</div>
 	);
 }

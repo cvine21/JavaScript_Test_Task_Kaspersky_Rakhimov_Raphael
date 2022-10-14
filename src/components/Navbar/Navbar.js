@@ -6,10 +6,7 @@ import "./Navbar.scss";
 
 function Navbar() {
 	return (
-		<nav
-			className="navbar navbar-expand-lg px-2 fixed"
-			style={{ background: "#1abc9c" }}
-		>
+		<nav className="navbar navbar-expand-lg px-2 fixed">
 			<div className="container-fluid">
 				<div
 					className="collapse navbar-collapse"

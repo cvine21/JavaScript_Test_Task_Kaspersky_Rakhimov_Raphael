@@ -6,7 +6,6 @@ import Home from "./pages/Home/Home";
 import Users from "./pages/Users/Users";
 import Header from "./components/Header/Header";
 
-import "./App.css";
 import AppContext from "./components/context";
 
 function App() {

@@ -1,3 +1,5 @@
+@import "../../index.scss";
+
 @mixin flex-center {
 	display: flex;
 	align-items: center;
@@ -40,7 +42,7 @@
 
 				&.active {
 					color: white !important;
-					background: #1abc9c;
+					background: $base-color;
 					transition: background 0.4s ease-in-out;
 				}
 
