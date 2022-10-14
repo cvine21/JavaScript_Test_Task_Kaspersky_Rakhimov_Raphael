@@ -30,9 +30,10 @@
 
 	button {
 		transition: transform 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
+		border: 0;
 
 		&:hover {
-			box-shadow: 0 0 5px white;
+			box-shadow: 0 0 10px white;
 		}
 
 		&:active {

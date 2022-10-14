@@ -6,11 +6,8 @@ function Card({ user }) {
 	const { fullname, group, phone } = user;
 
 	return (
-		<div
-			className="user-card text-center border"
-			style={{ width: "14rem" }}
-		>
-			<p className="bold">{fullname}</p>
+		<div className="user-card text-center bg-light border">
+			<p className="name bold">{fullname}</p>
 			<img width={140} src="photo.png" alt="photo" />
 			<div className="card-body">
 				<p className="card-text">{group}</p>

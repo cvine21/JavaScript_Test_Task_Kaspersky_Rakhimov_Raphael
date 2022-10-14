@@ -20,7 +20,7 @@ function SortOptions() {
 	return (
 		<div className="dropdown">
 			<button
-				className="btn btn-outline-dark dropdown-toggle border"
+				className="btn btn-light dropdown-toggle"
 				type="button"
 				data-bs-toggle="dropdown"
 				aria-expanded="false"

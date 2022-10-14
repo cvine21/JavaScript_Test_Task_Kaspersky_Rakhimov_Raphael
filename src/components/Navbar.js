@@ -4,7 +4,10 @@ import DisplayOptions from "./DisplayOptions";
 
 function Navbar() {
 	return (
-		<nav className="navbar navbar-expand-lg bg-light fixed">
+		<nav
+			className="navbar navbar-expand-lg fixed"
+			style={{ background: "#1abc9c" }}
+		>
 			<div className="container-fluid">
 				<div
 					className="collapse navbar-collapse"

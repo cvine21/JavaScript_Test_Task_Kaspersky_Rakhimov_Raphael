@@ -21,7 +21,7 @@ function DisplayOptions() {
 	return (
 		<div className="dropdown ms-3">
 			<button
-				className="btn btn-outline-dark dropdown-toggle border "
+				className="btn btn-light dropdown-toggle"
 				type="button"
 				data-bs-toggle="dropdown"
 				aria-expanded="false"

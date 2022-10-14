@@ -18,11 +18,9 @@ function Users() {
 	return (
 		<div className="users-wrapper">
 			<Navbar />
-			<div>
-				<UserTable />
-				<div className="cards users-data hide">{userCards}</div>
-				<div className="groups users-data hide">{groups}</div>
-			</div>
+			<UserTable />
+			<div className="cards users-data hide">{userCards}</div>
+			<div className="groups users-data hide">{groups}</div>
 		</div>
 	);
 }
