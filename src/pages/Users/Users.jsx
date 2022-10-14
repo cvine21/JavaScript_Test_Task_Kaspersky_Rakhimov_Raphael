@@ -9,7 +9,7 @@ import Group from "../../components/Group/Group";
 import "./Users.scss";
 
 function Users() {
-	const { visibleData: users } = useContext(AppContext);
+	const { visibleData: users, display } = useContext(AppContext);
 
 	const groupNames = ["Intern", "Junior", "Middle", "Senior"];
 	const groups = groupNames.map((item) => <Group name={item} />);
@@ -18,9 +18,13 @@ function Users() {
 	return (
 		<div className="users-wrapper">
 			<Navbar />
-			<UserTable />
-			<div className="cards users-data bg-dark hide">{userCards}</div>
-			<div className="groups users-data bg-dark hide">{groups}</div>
+			{display === "table" ? (
+				<UserTable />
+			) : display === "cards" ? (
+				<div className="cards users-data bg-dark">{userCards}</div>
+			) : (
+				<div className="groups users-data bg-dark">{groups}</div>
+			)}
 		</div>
 	);
 }

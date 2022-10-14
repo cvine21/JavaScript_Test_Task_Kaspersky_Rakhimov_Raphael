@@ -1,22 +1,8 @@
+import { useContext } from "react";
+import AppContext from "../context";
+
 function DisplayOptions() {
-	const displayOptions = document.querySelectorAll(".users-data");
-
-	const hideContent = () => {
-		displayOptions.forEach((item) => {
-			item.classList.add("hide");
-			item.classList.remove("show");
-		});
-	};
-
-	const showContent = (i) => {
-		displayOptions[i].classList.add("show");
-		displayOptions[i].classList.remove("hide");
-	};
-
-	const updateDisplayOption = (i) => {
-		hideContent();
-		showContent(i);
-	};
+	const { onUpdateDisplay } = useContext(AppContext);
 
 	return (
 		<div className="dropdown ms-3">
@@ -30,7 +16,7 @@ function DisplayOptions() {
 			</button>
 			<ul className="dropdown-menu">
 				<li
-					onClick={() => updateDisplayOption(0)}
+					onClick={() => onUpdateDisplay("table")}
 					className="dropdown-item"
 				>
 					<button
@@ -41,7 +27,7 @@ function DisplayOptions() {
 					</button>
 				</li>
 				<li
-					onClick={() => updateDisplayOption(1)}
+					onClick={() => onUpdateDisplay("cards")}
 					className="dropdown-item"
 				>
 					<button
@@ -52,7 +38,7 @@ function DisplayOptions() {
 					</button>
 				</li>
 				<li
-					onClick={() => updateDisplayOption(2)}
+					onClick={() => onUpdateDisplay("groups")}
 					className="dropdown-item"
 				>
 					<button

@@ -11,6 +11,7 @@ import AppContext from "./context";
 function App() {
 	const [users, setUser] = useState([]);
 	const [term, setTerm] = useState("");
+	const [display, setDisplay] = useState("table");
 
 	useEffect(() => {
 		async function fetchData() {
@@ -39,10 +40,22 @@ function App() {
 		setTerm(term);
 	};
 
+	const onUpdateDisplay = (display) => {
+		setDisplay(display);
+	};
+
 	const visibleData = searchEmp(users, term);
 
 	return (
-		<AppContext.Provider value={{ visibleData, updateSearch, onSort }}>
+		<AppContext.Provider
+			value={{
+				visibleData,
+				updateSearch,
+				onSort,
+				display,
+				onUpdateDisplay,
+			}}
+		>
 			<Header />
 			<Routes>
 				<Route path="/" element={<Home />} />
