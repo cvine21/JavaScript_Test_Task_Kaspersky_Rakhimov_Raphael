@@ -2,7 +2,7 @@ import { useContext } from "react";
 import AppContext from "../../components/context";
 
 import UserTable from "../../components/UserTable/UserTable";
-import Navbar from "../../components/Navbar";
+import Navbar from "../../components/Navbar/Navbar";
 import Card from "../../components/Card/Card";
 import Group from "../../components/Group";
 

@@ -1,11 +1,13 @@
-import SearchField from "./SearchField";
-import SortOptions from "./SortOptions";
-import DisplayOptions from "./DisplayOptions";
+import SearchField from "../SearchField";
+import SortOptions from "../SortOptions";
+import DisplayOptions from "../DisplayOptions";
+
+import "./Navbar.scss";
 
 function Navbar() {
 	return (
 		<nav
-			className="navbar navbar-expand-lg fixed"
+			className="navbar navbar-expand-lg px-2 fixed"
 			style={{ background: "#1abc9c" }}
 		>
 			<div className="container-fluid">

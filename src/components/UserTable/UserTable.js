@@ -12,7 +12,7 @@ function UserTable() {
 	));
 
 	return (
-		<div className="table-responsive border table-wrapper users-data show">
+		<div className="table-responsive table-wrapper users-data show">
 			<table className="table table-striped table-hover">
 				<thead className="table-secondary">
 					<tr>
