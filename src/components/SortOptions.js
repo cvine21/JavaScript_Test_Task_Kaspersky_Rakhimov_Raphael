@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+
 import AppContext from "../context";
 
 function SortOptions() {

@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import AppContext from "../../context";
 
+import AppContext from "../../context";
 import UserTable from "../../components/UserTable/UserTable";
 import Navbar from "../../components/Navbar/Navbar";
 import Card from "../../components/Card/Card";
@@ -21,9 +21,9 @@ function Users() {
 			{display === "table" ? (
 				<UserTable />
 			) : display === "cards" ? (
-				<div className="cards users-data bg-dark">{userCards}</div>
+				<div className="cards users-data">{userCards}</div>
 			) : (
-				<div className="groups users-data bg-dark">{groups}</div>
+				<div className="groups users-data">{groups}</div>
 			)}
 		</div>
 	);

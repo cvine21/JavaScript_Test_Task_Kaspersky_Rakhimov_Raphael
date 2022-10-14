@@ -1,5 +1,9 @@
 $base-color: #1abc9c;
 
+body {
+	background-color: #212529;
+}
+
 @mixin hover-effect {
 	transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
 

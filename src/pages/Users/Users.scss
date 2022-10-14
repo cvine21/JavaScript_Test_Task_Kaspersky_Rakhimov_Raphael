@@ -1,24 +1,12 @@
-.show {
-	display: block;
-}
-
-.hide {
-	display: none !important;
-}
-
 .users-wrapper {
 	padding-top: 126px;
-}
 
-.cards {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
-
-.groups {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	flex-wrap: wrap;
+	.cards,
+	.groups {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		max-width: 1600px;
+		margin: auto;
+	}
 }

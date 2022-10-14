@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Header.scss";
 
 function Header(props) {
-	const onChangeBg = (e) => {
+	const onActive = (e) => {
 		const listItems = document.querySelectorAll("li");
 		listItems.forEach((item) => item.classList.remove("active"));
 		e.target.classList.add("active");
@@ -26,7 +26,7 @@ function Header(props) {
 				<ul className="navbar-list">
 					<Link to="/">
 						<li
-							onClick={onChangeBg}
+							onClick={onActive}
 							className="nav-list-item rounded"
 						>
 							HOME
@@ -34,7 +34,7 @@ function Header(props) {
 					</Link>
 					<Link to="/users">
 						<li
-							onClick={onChangeBg}
+							onClick={onActive}
 							className="nav-list-item rounded"
 						>
 							USERS

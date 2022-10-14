@@ -1,5 +1,3 @@
-import ContentLoader from "react-content-loader";
-
 import "./Card.scss";
 
 function Card({ user }) {

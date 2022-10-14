@@ -1,15 +1,22 @@
 import "./UserTable.scss";
 
-import UserRow from "../UserRow";
 import { useContext } from "react";
 import AppContext from "../../context";
 
 function UserTable() {
 	const { visibleData: users } = useContext(AppContext);
 
-	const usersList = users.map((user) => (
-		<UserRow user={user} key={user.id} />
-	));
+	const usersList = users.map(
+		({ fullname, account, email, group, phone, id }) => (
+			<tr key={id}>
+				<td>{fullname}</td>
+				<td>{account}</td>
+				<td>{email}</td>
+				<td>{group}</td>
+				<td>{phone}</td>
+			</tr>
+		)
+	);
 
 	return (
 		<div className="table-responsive table-wrapper users-data">

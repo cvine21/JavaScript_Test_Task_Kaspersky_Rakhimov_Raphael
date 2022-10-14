@@ -2,11 +2,16 @@
 
 .navbar {
 	background-color: $base-color;
+	text-align: center;
 
 	&.fixed {
 		position: fixed;
 		width: 100%;
 		top: 72px;
 		z-index: 1;
+	}
+
+	ul {
+		margin-bottom: 0 !important;
 	}
 }
