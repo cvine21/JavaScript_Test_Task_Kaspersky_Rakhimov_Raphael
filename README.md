@@ -17,7 +17,7 @@ A react application that displays a list of users
 ## Setup
 1. Clone this repo and go to the cloned folder.
 ``` sh
-$> https://github.com/cvine21/react-kaspersky-test.git && cd react-kaspersky-test
+$> https://github.com/cvine21/JavaScript_Test_Task_Kaspersky_Rakhimov_Raphael.git && cd JavaScript_Test_Task_Kaspersky_Rakhimov_Raphael
 ```
 2. Install all the dependencies
 ``` sh
